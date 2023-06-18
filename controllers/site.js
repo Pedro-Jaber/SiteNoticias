@@ -84,14 +84,6 @@ module.exports.newsFiltered = (req, res) => {
   res.send("Noticías Filtradas por " + filtro)
 }
 
-module.exports.test3 = (req, res) => {
-  res.send("home page")
-}
-
-module.exports.test4 = (req, res) => {
-  res.send("home page")
-}
-
 
 /*
 app.get('/', (req, res) => {

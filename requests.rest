@@ -1,0 +1,119 @@
+GET http://localhost:8081/
+
+###
+
+GET http://localhost:8081/db/tags
+
+###
+
+GET http://localhost:8081/db/news
+
+###
+
+GET http://localhost:8081/db/tagnews
+
+###
+
+POST http://localhost:8081/db/pop/news
+content-type: application/json
+
+{
+  "title": "Novo estudo revela avanços na cura do câncer de pulmão",
+  "image": "cancer_pulmao.jpg",
+  "call": "Pesquisadores descobrem terapia promissora para o câncer de pulmão",
+  "body": "Um novo estudo científico revelou avanços promissores na busca por uma cura efetiva para o câncer de pulmão. Pesquisadores descobriram uma nova terapia que tem demonstrado resultados positivos em pacientes com estágios avançados da doença. A terapia utiliza uma combinação de imunoterapia e drogas-alvo específicas para combater as células cancerígenas. Os resultados iniciais são encorajadores e oferecem esperança para aqueles que lutam contra o câncer de pulmão."
+}
+
+###
+
+POST http://localhost:8081/db/pop/tagnews
+content-type: application/json
+
+{
+  "newsId": "1",
+  "tagId": "5"
+}
+
+###
+
+POST http://localhost:8081/db/pop/tagnews
+content-type: application/json
+
+{
+  "newsId": "1",
+  "tagId": "7"
+}
+
+###
+
+POST http://localhost:8081/db/pop/tag
+content-type: application/json
+
+{
+  "tag": "esportes"
+}
+
+###
+
+POST http://localhost:8081/db/pop/tag
+content-type: application/json
+
+{
+  "tag": "entreterimento"
+}
+
+###
+
+POST http://localhost:8081/db/pop/tag
+content-type: application/json
+
+{
+  "tag": "economia"
+}
+
+###
+
+POST http://localhost:8081/db/pop/tag
+content-type: application/json
+
+{
+  "tag": "politica"
+}
+
+###
+
+POST http://localhost:8081/db/pop/tag
+content-type: application/json
+
+{
+  "tag": "saude"
+}
+
+###
+
+POST http://localhost:8081/db/pop/tag
+content-type: application/json
+
+{
+  "tag": "internacional"
+}
+
+###
+
+POST http://localhost:8081/db/pop/tag
+content-type: application/json
+
+{
+  "tag": "ciencia"
+}
+
+###
+
+POST http://localhost:8081/db/pop/tag
+content-type: application/json
+
+{
+  "tag": "meio-ambiente"
+}
+
+###
