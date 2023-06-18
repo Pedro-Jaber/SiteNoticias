@@ -75,13 +75,13 @@ const bd = [
 
 module.exports.homePage = (req, res) => {
   const title = 'Home Page'
-  res.render('new', {title: title})
+  res.render('home', {title: title})
 }
 
 module.exports.newsFiltered = (req, res) => {
   const filtro = req.params.filtro
   const title = filtro
-  res.send("Noticías Filtradas por " + filtro)
+  res.render('newsFiltered', {title: filtro})
 }
 
 
