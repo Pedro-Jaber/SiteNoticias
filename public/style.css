@@ -16,6 +16,16 @@
   position: relative;
 }
 
+div.card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+div.card a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
 .news-img {
   max-width: 100%;
   display: block;
