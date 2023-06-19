@@ -30,10 +30,9 @@ app.use("/db", dbRoutes)
 db.sequelize.authenticate()
   .then(() => {
     console.log("=~=~=~=~=~=~=~=~=~=~=~=~=~=")
-    
-    console.log("Database:\x1b[92m Connected \x1b[0m")
 
     app.listen(PORT, () => {
+      console.log("Database:\x1b[92m Connected \x1b[0m")
       console.log("Server:\x1b[92m Online \x1b[0m")
       console.log("Port: " + PORT)
       console.log(`link: http://localhost:${PORT}`)

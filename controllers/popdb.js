@@ -1,4 +1,3 @@
-const { query } = require('express')
 const models = require('../model/models')
 
 
@@ -7,7 +6,7 @@ const models = require('../model/models')
 module.exports.dbPopTag = (req, res) => {
   //console.log(req.body)
 
-  models.tags.bulkCreate(req.body).then(() => {
+  models.tags.bulkCreate(req.body, { validate: true }).then(() => {
     console.log("tag created")
   }).catch((err) => {
     console.log("tag NOT created: " + err)
@@ -17,7 +16,7 @@ module.exports.dbPopTag = (req, res) => {
 module.exports.dbPopNews = (req, res) => {
   //console.log(req.body)
 
-  models.news.bulkCreate(req.body).then(() => {
+  models.news.bulkCreate(req.body, { validate: true }).then(() => {
     console.log("news created")
   }).catch((err) => {
     console.log("news NOT created: " + err)
@@ -27,7 +26,7 @@ module.exports.dbPopNews = (req, res) => {
 module.exports.dbPopTagNews = (req, res) => {
   //console.log(req.body)
 
-  models.tagNews.bulkCreate(req.body).then(() => {
+  models.tagNews.bulkCreate(req.body, { validate: true }).then(() => {
     console.log("relation tag-news created")
   }).catch((err) => {
     console.log("relation tag-news NOT created: " + err)

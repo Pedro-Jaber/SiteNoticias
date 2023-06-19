@@ -28,34 +28,34 @@ content-type: application/json
 
 [
   {
-    "tag": "esportes"
+    "tag": "Esportes"
   },
   {
-    "tag": "entreterimento"
+    "tag": "Entreterimento"
   },
   {
-    "tag": "economia"
+    "tag": "Economia"
   },
   {
-    "tag": "politica"
+    "tag": "Política"
   },
   {
-    "tag": "saude"
+    "tag": "Saúde"
   },
   {
-    "tag": "educacao"
+    "tag": "Educação"
   },
   {
-    "tag": "internacional"
+    "tag": "Internacional"
   },
   {
-    "tag": "ciencia"
+    "tag": "Ciência"
   },
   {
-    "tag": "tecnologia"
+    "tag": "Tecnologia"
   },
   {
-    "tag": "meio-ambiente"
+    "tag": "Meio Ambiente"
   }
 ]
 
