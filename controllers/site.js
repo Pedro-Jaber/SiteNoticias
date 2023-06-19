@@ -1,30 +1,55 @@
 const models = require('../model/models')
+const { Op } = require("sequelize");
 
 
 
 module.exports.homePage = async (req, res) => {
   const title = 'Home Page'
-  const news = await models.news.findAll({ limit: 20, order: [['createdAt', 'DESC']], include: "tags"})
-  //res.json(news)
-  res.render('home', {title: title, news: news })
+
+  models.news.findAll({ 
+    limit: 20, 
+    order: [['createdAt', 'DESC']]
+  }).then((news) => {
+    res.render('home', {title: title, news: news })
+    //res.json(news)
+  })
+  .catch((error) => {
+    console.error(error);
+  });
 }
 
-module.exports.newsFiltered = (req, res) => {
+module.exports.newsFiltered = async (req, res) => {
   const filtro = req.params.filtro
-  res.render('newsFiltered', {title: filtro})
+
+  models.news.findAll({
+    limit: 20, 
+    order: [['createdAt', 'DESC']],
+    include: [{
+        model: models.tags,
+        where: {
+          tag: filtro
+        }
+      }]
+  }).then((news) => {
+    res.render('newsFiltered', {title: filtro, news: news })
+    //res.json(news)
+  }).catch((error) => {
+    console.error(error);
+  });
 }
 
+module.exports.news = async (req, res) => {
+  const newsId = req.params.id
 
-/*
-app.get('/', (req, res) => {
-  //res.send('home page')
-  const title = 'top'
-  res.render('new', {title: title})
-})
-
-app.get('/:teste', (req, res) => {
-  //res.send('home page')
-  console.log(req.params.teste)
-  res.send(req.params.teste)
-})
-*/
+  models.news.findOne({
+    include: "tags",
+    where: {
+      id: newsId
+    }
+  }).then((news) => {
+    res.render('news', {title: "test", news: news})
+    //res.json(news)
+  }).catch((error) => {
+    console.error(error);
+  });
+}

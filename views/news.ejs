@@ -1,0 +1,19 @@
+<h1><%- news.title %></h1>
+
+<div class="card card-main">
+  <div class="card-body">
+    <img class="news-img" src="\news images\<%= news.image %>" alt="">
+  </div>
+</div>
+
+<div class="my-4">
+  <% news.tags.forEach((tag) => { %>
+    <span class="tag"><a class="no-decoration" href="\<%- tag.tag %>"><%- tag.tag %></a></span>
+  <% }); %>
+</div>
+
+<hr class="mt-1">
+
+<p><%- news.call %></p>
+
+<p><%- news.body %></p>

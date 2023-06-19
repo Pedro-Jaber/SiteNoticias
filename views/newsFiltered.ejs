@@ -1,0 +1,19 @@
+<h1><%= title %></h1>
+
+<hr class="mt-5">
+
+<% news.forEach((item) => { %>
+  <div class="card card-news my-3">
+    <a class="card-a" href="/news/<%= item.id %>">
+      <div class="row g-0">
+        <div class="col-7 p-3">
+          <h3><%= item.title %></h3>
+          <p><%= item.call %></p>
+        </div>
+        <div class="col-5 p-0 d-flex justify-content-end img-div">
+          <img class="card-img-border news-img" src="\news images\<%= item.image %>" alt="">
+        </div>
+      </div>
+    </a>
+  </div>
+<% }); %>

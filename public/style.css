@@ -6,9 +6,15 @@
   border-radius: 0 20px 20px 0;
 }
 
-.card {
+.card-news {
   border-radius: 20px;
   max-height: 190px;
+  overflow: hidden;
+}
+
+.card-main {
+  border-radius: 20px;
+  height: 327px;
   overflow: hidden;
 }
 
@@ -21,13 +27,23 @@ div.card a {
   color: inherit;
 }
 
+.no-decoration { 
+  text-decoration: none;
+  color: inherit;
+}
+
 div.card a:hover {
   text-decoration: none;
   color: inherit;
 }
 
+.img-cover {
+  object-fit: fill;
+}
+
 .news-img {
-  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
   display: block;
 
   position: absolute;
@@ -36,6 +52,13 @@ div.card a:hover {
   left: -9999px;
   right: -9999px;
   margin: auto;
+}
+
+.tag {
+  color: #fff;
+  background-color: hsla(217, 81%, 39%, 0.41);
+  border-radius: 20px;
+  padding: 10px 15px;
 }
 
 .fit-content-w {
